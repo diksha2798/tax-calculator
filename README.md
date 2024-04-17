@@ -20,5 +20,6 @@
 ![tax-check-60above](https://github.com/diksha2798/tax-calculator/assets/161025733/f0de3c92-e389-459e-a255-4f8e75e48fc6)
 ![tax-check-60above-2](https://github.com/diksha2798/tax-calculator/assets/161025733/15796b33-e12e-47da-bb6b-83dd4a4b89f3)
 
-Overall income is calculated by this formula - 
-(((Gross annual salary+ extra income)-Deduction)-800000)*0.3/0.4/0.1(0.3/0.4/0.1- this value is based on ax rate for different age group)
+# Overall income is calculated by this formula - 
+# (((Gross annual salary+ extra income)-Deduction)-800000)*0.3/0.4/0.1 
+# (0.3/0.4/0.1- this value is based on ax rate for different age group)
