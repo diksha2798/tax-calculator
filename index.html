@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>Tax Calculator</title>
+  </head>
+  <body>
+    <div id="formBox" class="container" style="margin-left: 450px; width: 40%">
+      <h1
+        class="fs-1 font-weight-bold text-center"
+        style="padding-top: 50px; padding-bottom: 0"
+      >
+        Tax Calculator
+      </h1>
+      <div
+        class="d-flex justify-content-center border border-secondary border-4"
+        style="margin-top: 30px"
+      >
+        <form
+          id="taxForm"
+          class="container"
+          style="padding-left: 100px; margin-top: 50px"
+        >
+          <div class="mb-3 position-relative">
+            <label class="form-label" style="font-weight: 600" for="grossIncome"
+              >Enter gross annual income
+              <i
+                class="material-icons"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Gross annual income is your total salary in a year before any deductions"
+                style="font-size: 20px"
+                >help_outline</i
+              ></label
+            >
+            <input
+              class="form-control border border-4"
+              style="width: 80%"
+              id="grossIncome"
+              value=""
+              placeholder="Enter gross annual income"
+              type="text"
+            />
+            <i
+              class="material-icons position-absolute d-none"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Please enter numbers only"
+              id="grossNumberError"
+              style="
+                font-size: 20px;
+                color: red;
+                transform: translateY(-100%);
+                padding-left: 70%;
+                padding-bottom: 12px;
+              "
+              >error_outline</i
+            >
+            <i
+              class="material-icons position-absolute d-none"
+              id="grossFillError"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Input field is mandatory"
+              style="
+                font-size: 20px;
+                color: red;
+                transform: translateY(-100%);
+                padding-left: 70%;
+                padding-bottom: 12px;
+              "
+              >error_outline</i
+            >
+          </div>
+          <div class="mb-3 position-relative">
+            <label class="form-label" style="font-weight: 600" for="grossIncome"
+              >Enter extra income<i
+                class="material-icons"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Extra income is money you earn in addition to your regular paycheck"
+                style="font-size: 20px"
+                >help_outline</i
+              ></label
+            >
+            <input
+              class="form-control border border-4"
+              style="width: 80%"
+              id="extraIncome"
+              value=""
+              placeholder="Enter extra income from other sources"
+              type="text"
+            />
+            <i
+              class="material-icons position-absolute d-none"
+              id="extraNumberError"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Please enter numbers only"
+              style="
+                font-size: 20px;
+                color: red;
+                transform: translateY(-100%);
+                padding-left: 70%;
+                padding-bottom: 12px;
+              "
+              >error_outline</i
+            >
+            <i
+              class="material-icons position-absolute d-none"
+              id="extraFillError"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Input field is mandatory"
+              style="
+                font-size: 20px;
+                color: red;
+                transform: translateY(-100%);
+                padding-left: 70%;
+                padding-bottom: 12px;
+              "
+              >error_outline</i
+            >
+          </div>
+          <div class="mb-3 position-relative">
+            <label class="form-label" style="font-weight: 600" for="grossIncome"
+              >Enter age group<i
+                class="material-icons"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="The amount over 8 Lakhs is taxed at (30% for people with age less than 40)(40% for people with age greater than or equal to 40 but less than 60)(10% for people with age greater than or equal to 60)"
+                style="font-size: 20px"
+                >help_outline</i
+              ></label
+            >
+            <select
+              class="form-control border border-4"
+              style="width: 80%"
+              id="age"
+              value="submit"
+            >
+              <option></option>
+              <option value="<40">&lt;40</option>
+              <option value="≥40&<60">&ge; 40 &amp; &lt; 60</option>
+              <option value="≥60">&ge;60</option>
+            </select>
+            <i
+              class="material-icons position-absolute d-none"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Input field is mandatory"
+              id="ageFillError"
+              style="
+                font-size: 20px;
+                color: red;
+                transform: translateY(-100%);
+                padding-left: 70%;
+                padding-bottom: 12px;
+              "
+              >error_outline</i
+            >
+          </div>
+          <div class="mb-3 position-relative">
+            <label class="form-label" style="font-weight: 600" for="grossIncome"
+              >Enter total applicable deductions
+              <i
+                class="material-icons"
+                data-toggle="tooltip"
+                data-placement="top"
+                title="A tax deduction  is an amount deducted from taxable income, usually based on expenses such as those incurred to produce additional income"
+                style="font-size: 20px"
+                >help_outline</i
+              >
+            </label>
+            <input
+              class="form-control border border-4"
+              style="width: 80%"
+              id="totalDeduction"
+              value=""
+              placeholder="Add total applicable deductions"
+              type="text"
+            />
+            <i
+              class="material-icons position-absolute d-none"
+              id="deductionNumberError"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Please enter numbers only"
+              style="
+                font-size: 20px;
+                color: red;
+                transform: translateY(-100%);
+                padding-left: 70%;
+                padding-bottom: 12px;
+              "
+              >error_outline</i
+            >
+            <i
+              class="material-icons position-absolute d-none"
+              id="deductionfillError"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Input field is mandatory"
+              style="
+                font-size: 20px;
+                color: red;
+                transform: translateY(-100%);
+                padding-left: 70%;
+                padding-bottom: 12px;
+              "
+              >error_outline</i
+            >
+          </div>
+          <input
+            type="submit"
+            class="mb-3 text-white fs-5"
+            style="
+              margin-top: 50px;
+              width: 80%;
+              height: 40px;
+              background-color: rgb(79, 68, 234);
+            "
+            value="Submit"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="container d-none"
+      style="margin: 60px 0 50px 460px; width: 40%"
+      id="popupBox"
+    >
+      <div
+        class="d-flex flex-column align-items-center justify-content-center border border-secondary border-4"
+        style="height: 600px"
+      >
+        <p style="font-weight: 600" class="fs-2" id="finalValue">
+          Your overall income will be:
+        </p>
+        <p id="overallIncome" style="font-weight: 500" class="fs-3"></p>
+        <p style="font-weight: 400" class="fs-6 d-none" id="afterTax">
+          after tax deduction.
+        </p>
+        <button
+          id="closeBtn"
+          class="text-white fs-5"
+          style="height: 40px; background-color: rgb(79, 68, 234)"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>
