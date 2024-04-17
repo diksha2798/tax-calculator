@@ -22,4 +22,4 @@
 
 # Overall income is calculated by this formula - 
 # (((Gross annual salary+ extra income)-Deduction)-800000)*0.3/0.4/0.1 
-# (0.3/0.4/0.1- this value is based on ax rate for different age group)
+# (0.3/0.4/0.1- this value is based on tax rate for different age group)
